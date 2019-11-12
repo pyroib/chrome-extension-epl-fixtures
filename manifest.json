@@ -1,0 +1,40 @@
+{
+	"manifest_version": 2,
+	"name": "EPL Fixture data converter",
+	"version": "0.1",
+	"description": "grabs the data from the EPL website and converts it so i can use on tipping-comp",
+	"homepage_url": "http://www.blott.com.au",
+
+	"browser_action": {
+		"default_icon":"images/icon16.png"
+	},
+
+	"icons": { 
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+	
+	"content_scripts": [
+		{
+			"matches": [
+				"https://www.premierleague.com/fixtures"
+			],
+			"js": [
+				"src/jquery-3.3.1.js", 
+				"src/content.js"
+			],
+			"run_at": "document_end"
+		}
+	],
+	
+	"background":{
+		"scripts": [
+			"src/background.js"
+		]
+	},
+	
+	"permissions": [
+		"activeTab"
+	]
+}
