@@ -1,4 +1,4 @@
-# EPL fixture conerter
+# EPL fixture converter
 
 A extension that edits the EPL fixture page into update or insert SQL queries for the tipping-comp system.
 
